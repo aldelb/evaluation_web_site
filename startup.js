@@ -20,14 +20,6 @@ window.onresize = function(event) {
   checkOrientation();
 };
 
-// $(document).ready(function(){
-// $(window).scroll(function(){
-// $('#header').css({
-// 'left': $(this).scrollLeft()//Note commented because it causes the endless scrolling to the left
-// });
-// });
-// });
-
 
 // callbacks
 function callbackFilesLoaded() {
