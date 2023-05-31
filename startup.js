@@ -185,7 +185,7 @@ function startup(config) {
   session.config = configFile;
 
   if (config.language == undefined) {
-    config.language = 'en';
+    config.language = 'fr';
   }
   pageTemplateRenderer = new PageTemplateRenderer(pageManager, config.showButtonPreviousPage, config.language);
   pageManager.addCallbackPageEventChanged(pageTemplateRenderer.refresh.bind(pageTemplateRenderer));

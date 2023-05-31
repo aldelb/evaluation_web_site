@@ -1,4 +1,4 @@
-testname: Facial behaviours evaluation
+testname: Evaluation des comportements faciaux
 testId: facial-evaluation
 bufferSize: 2048
 stopOnErrors: true
@@ -9,15 +9,15 @@ remoteService: service/write.php
 pages:
     - type: generic
       id: first_page
-      name: Welcome
-      content: Welcome to facial behaviours evaluation!       
+      name: Page d'instruction
+      content: content in GenericPage.js
     - 
           - random
           - type: video_believable
             id: scene2_sexisme_mic2_believability
             name: Page 1 of 22
-            content: Rate the videos shown below (for this condition there is NO sound)
-            question: How human-like was the agent in this video?
+            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
+            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
             stimuli: 
                 C1: [b_real_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/real.mp4]
                 C2: [b_m1_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/50_700.mp4]
@@ -26,8 +26,8 @@ pages:
           - type: video_synchronized
             id: scene2_sexisme_mic2_synchronization
             name: Page 2 of 22
-            content: Rate the videos shown below (for this condition there is sound)
-            question: How well the agent's behavior matches the speech (in terms of rhythm, intonation of speech) ?
+            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
+            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
             stimuli: 
                 C1: [s_real_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/real.mp4]
                 C2: [s_m1_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/50_700.mp4]
@@ -37,8 +37,8 @@ pages:
           - type: video_believable
             id: scene5_confrontation1_mic1_believability
             name: Page 3 of 22
-            content: Rate the videos shown below (for this condition there is NO sound)
-            question: How human-like was the agent in this video?
+            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
+            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
             stimuli: 
                 C1: [b_real_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/real.mp4]
                 C2: [b_m1_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/50_700.mp4] 
@@ -47,8 +47,8 @@ pages:
           - type: video_synchronized
             id: scene5_confrontation1_mic1_synchronization
             name: Page 4 of 22
-            content: Rate the videos shown below (for this condition there is sound)
-            question: How well the agent's behavior matches the speech (in terms of rhythm, intonation of speech) ?
+            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
+            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
             stimuli: 
                 C1: [s_real_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/real.mp4]
                 C2: [s_m1_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/50_700.mp4]
@@ -58,8 +58,8 @@ pages:
           - type: video_believable
             id: scene2_confrontation_prise1_mic1_believability
             name: Page 5 of 22
-            content: Rate the videos shown below (for this condition there is NO sound)
-            question: How human-like was the agent in this video?
+            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
+            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
             stimuli: 
                 C1: [b_real_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/real.mp4]
                 C2: [b_m1_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/50_700.mp4]
@@ -68,8 +68,8 @@ pages:
           - type: video_synchronized
             id: scene2_confrontation_prise1_mic1_synchronization
             name: Page 6 of 22
-            content: Rate the videos shown below (for this condition there is sound)
-            question: How well the agent's behavior matches the speech (in terms of rhythm, intonation of speech) ?
+            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
+            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
             stimuli: 
                 C1: [s_real_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/real.mp4]
                 C2: [s_m1_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/50_700.mp4]
@@ -79,8 +79,8 @@ pages:
           - type: video_believable
             id: scene3_sexisme_prise3_mic1_believability
             name: Page 7 of 22
-            content: Rate the videos shown below (for this condition there is NO sound)
-            question: How human-like was the agent in this video?
+            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
+            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
             stimuli: 
                 C1: [b_real_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/real.mp4]
                 C2: [b_m1_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/50_700.mp4]
@@ -89,8 +89,8 @@ pages:
           - type: video_synchronized
             id: scene3_sexisme_prise3_mic1_synchronization
             name: Page 8 of 22
-            content: Rate the videos shown below (for this condition there is sound)
-            question: How well the agent's behavior matches the speech (in terms of rhythm, intonation of speech) ?
+            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
+            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
             stimuli: 
                 C1: [s_real_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/real.mp4]
                 C2: [s_m1_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/50_700.mp4]
@@ -98,14 +98,14 @@ pages:
                 C4: [s_m2_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/6_700.mp4]
   
     - type: finish
-      name: Thank you
-      content: Thank you for attending!
+      name: Merci
+      content: Merci pour votre participation
       showResults: true
       writeResults: true
       questionnaire:
           - type: text
-            label: eMail
-            name: email
+            label: Nom Prénom
+            name: name
           - type: number
             label: Age
             name: age
@@ -114,7 +114,7 @@ pages:
             default: 30
           - type: likert
             name: gender
-            label: Gender
+            label: Genre
             response:
              - value: female
                label: Female
@@ -122,3 +122,27 @@ pages:
                label: Male
              - value: other
                label: Other
+          - type: likert
+            name: video_game
+            label: A quelle fréquence jouez-vous aux jeux vidéos ? 
+            response:
+             - value: often
+               label: Souvent
+             - value: sometimes
+               label: Parfois
+             - value: rarely
+               label: Rarement
+             - value: never
+               label: Jamais
+          - type: likert
+            name: animation_movies
+            label: A quelle fréquence voyez-vous des films d'animation ?
+            response:
+             - value: often
+               label: Souvent
+             - value: sometimes
+               label: Parfois
+             - value: rarely
+               label: Rarement
+             - value: never
+               label: Jamais
