@@ -243,3 +243,6 @@ li{
 	margin-left:25%;
 }
 
+.vjs-volume-panel {
+  display:none;
+}

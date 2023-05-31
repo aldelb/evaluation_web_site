@@ -57,10 +57,16 @@ will be prosecuted to the maximum extent possible under law.
 
     <!-- webMUSHRA -->
     <!-- build:js:generic lib/webMUSHRA.js -->
+
     <!-- audio -->
     <script src="lib/webmushra/audio/AudioFileLoader.js"></script>
     <script src="lib/webmushra/audio/MushraAudioControl.js"></script>
     <script src="lib/webmushra/audio/GenericAudioControl.js"></script>
+
+        
+    <!-- video -->
+    <script src="lib/webmushra/video/VideoVisualizer.js"></script>
+    
 
     <!-- business -->
     <script src="lib/webmushra/business/DataSender.js"></script>
@@ -75,49 +81,23 @@ will be prosecuted to the maximum extent possible under law.
     <script src="lib/webmushra/control/InputController.js"></script>
 
     <!-- datamodel -->
-    <script src="lib/webmushra/datamodel/BS1116Rating.js"></script>
     <script src="lib/webmushra/datamodel/MUSHRARating.js"></script>
-    <script src="lib/webmushra/datamodel/LikertMultiStimulusRating.js"></script>
-    <script src="lib/webmushra/datamodel/LikertSingleStimulusRating.js"></script>
-    <script src="lib/webmushra/datamodel/PairedComparisonChoice.js"></script>
     <script src="lib/webmushra/datamodel/Participant.js"></script>
     <script src="lib/webmushra/datamodel/Session.js"></script>
     <script src="lib/webmushra/datamodel/Stimulus.js"></script>
     <script src="lib/webmushra/datamodel/Trial.js"></script>
-    <script src="lib/webmushra/datamodel/SpatialLocalizationRating.js"></script>
-    <script src="lib/webmushra/datamodel/SpatialASWRating.js"></script>
-    <script src="lib/webmushra/datamodel/SpatialHWDRating.js"></script>
-    <script src="lib/webmushra/datamodel/SpatialLEVRating.js"></script>
 
-    <!-- spatial -->
-    <script src="lib/webmushra/spatial/Camera.js"></script>
-    <script src="lib/webmushra/spatial/Scene.js"></script>
-    <script src="lib/webmushra/spatial/objects/LocalizationObject.js"></script>
-    <script src="lib/webmushra/spatial/objects/LEVObject.js"></script>
-    <script src="lib/webmushra/spatial/objects/ASWObject.js"></script>
 
     <!-- misc -->
     <script src="lib/webmushra/misc/MushraValidator.js"></script>
-    <script src="lib/webmushra/misc/WaveformVisualizer.js"></script>
     <script src="lib/webmushra/misc/LikertScale.js"></script>
-    <script src="lib/webmushra/misc/FilePlayer.js"></script>
     <script src="lib/webmushra/misc/Localizer.js"></script>
     <script src="lib/webmushra/misc/Shuffle.js"></script>
 
     <!-- pages -->
-    <script src="lib/webmushra/pages/BS1116Page.js"></script>
-    <script src="lib/webmushra/pages/BS1116PageManager.js"></script>
     <script src="lib/webmushra/pages/FinishPage.js"></script>
     <script src="lib/webmushra/pages/GenericPage.js"></script>
-    <script src="lib/webmushra/pages/ConsentPage.js"></script>
-    <script src="lib/webmushra/pages/MushraPage.js"></script>
-    <script src="lib/webmushra/pages/PairedComparisonPage.js"></script>
-    <script src="lib/webmushra/pages/PairedComparisonPageManager.js"></script>
-    <script src="lib/webmushra/pages/VolumePage.js"></script>
-    <script src="lib/webmushra/pages/LikertSingleStimulusPage.js"></script>
-    <script src="lib/webmushra/pages/LikertSingleStimulusPageManager.js"></script>
-    <script src="lib/webmushra/pages/LikertMultiStimulusPage.js"></script>
-    <script src="lib/webmushra/pages/SpatialPage.js"></script>
+    <script src="lib/webmushra/pages/VideoPage.js"></script>
 
     <script src="lib/webmushra/nls/nls.js"></script>
     <!-- /build -->
@@ -126,6 +106,9 @@ will be prosecuted to the maximum extent possible under law.
     <script src="lib/external/yaml/yaml.min.js"></script>
 
     <link rel="stylesheet" href="design/style.css">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+
   </head>
 
   <body data-theme="a">
@@ -142,22 +125,16 @@ will be prosecuted to the maximum extent possible under law.
       <div class="ui-body ui-body-a ui-corner-all" id="page_navigation">
       </div>
 
-      <table align="right" class="logo">
+      <!--<table align="right" class="logo">
         <tr>
           <td class="logo" style="vertical-align:top; padding-right:0px;"><small><strong>webMUSHRA
-              <!-- build:template:dev
-              Dev
-              /build -->
-              <!-- build:template
-              <%= version %>
-              /build -->
               by</strong></small>
           </td>
           <td class="logo"><a href="https://www.audiolabs-erlangen.de/"><img src="design/images/alabs_new.png" class="logo"/></a></td>
           <td class="logo"><a href="http://www.iis.fraunhofer.de/"><img src="design/images/iis.svg" class="logo" /></a></td>
           <td class="logo"><a href="https://www.fau.eu/"><img src="design/images/techfak.svg" class="logo" /></a></td>
         </tr>
-      </table>
+      </table> -->
 
     </div>
     <div data-role="popup" data-dismissible="false" data-history="false" data-transition="flip" positionTo="window" id="popupErrors">

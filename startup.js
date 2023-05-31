@@ -65,43 +65,38 @@ function callbackURLFound() {
   $("#popupErrors").popup("open");
 }
 
+function melange(tableau) {
+  for (let i = 0; i < tableau.length; i += 2) {
+    const j = Math.floor(Math.random() * (tableau.length / 2)) * 2;
+    const temp1 = tableau[i];
+    const temp2 = tableau[i+1];
+    tableau[i] = tableau[j];
+    tableau[i+1] = tableau[j+1];
+    tableau[j] = temp1;
+    tableau[j+1] = temp2;
+  }
+  return tableau;
+}
+
 function addPagesToPageManager(_pageManager, _pages) {
+  var j = 1
   for (var i = 0; i < _pages.length; ++i) {
     if (Array.isArray(_pages[i])) {
       if (_pages[i][0] === "random") {
-        _pages[i].shift();
-        shuffle(_pages[i]);
+        _pages[i].shift()
+        melange(_pages[i]);
       }
       addPagesToPageManager(_pageManager, _pages[i]);
     } else {
       var pageConfig = _pages[i];
       if (pageConfig.type == "generic") {
         _pageManager.addPage(new GenericPage(_pageManager, pageConfig));
-      } else if (pageConfig.type == "consent") {
-        _pageManager.addPage(new ConsentPage(_pageManager, pageTemplateRenderer, pageConfig));
-      } else if (pageConfig.type == "volume") {
-        var volumePage = new VolumePage(_pageManager, audioContext, audioFileLoader, pageConfig, config.bufferSize, errorHandler, config.language);
-        _pageManager.addPage(volumePage);
-      } else if (pageConfig.type == "mushra") {
-        var mushraPage = new MushraPage(_pageManager, audioContext, config.bufferSize, audioFileLoader, session, pageConfig, mushraValidator, errorHandler, config.language);
-        _pageManager.addPage(mushraPage);
-      } else if ( pageConfig.type == "spatial"){
-        _pageManager.addPage(new SpatialPage(_pageManager, pageConfig, session, audioContext, config.bufferSize, audioFileLoader, errorHandler, config.language));
-      } else if (pageConfig.type == "paired_comparison") {
-        var pcPageManager = new PairedComparisonPageManager();
-        pcPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
-        pcPageManager = null;
-      } else if (pageConfig.type == "bs1116") {
-        var bs1116PageManager = new BS1116PageManager();
-        bs1116PageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
-        bs1116PageManager = null;
-      } else if (pageConfig.type == "likert_single_stimulus") {
-        var likertSingleStimulusPageManager = new LikertSingleStimulusPageManager();
-        likertSingleStimulusPageManager.createPages(_pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
-        likertSingleStimulusPageManager = null;
-      } else if (pageConfig.type == "likert_multi_stimulus") {
-        var likertMultiStimulusPage = new LikertMultiStimulusPage(pageManager, pageTemplateRenderer, pageConfig, audioContext, config.bufferSize, audioFileLoader, session, errorHandler, config.language);
-        _pageManager.addPage(likertMultiStimulusPage);
+      } else if (pageConfig.type == "video_believable") {
+        var videoPage = new VideoPage(_pageManager, pageTemplateRenderer, session, config, pageConfig, errorHandler, config.language, j, _pages.length, false);
+        _pageManager.addPage(videoPage);
+      } else if (pageConfig.type == "video_synchronized") {
+        var videoPage = new VideoPage(_pageManager, pageTemplateRenderer, session, config, pageConfig, errorHandler, config.language, j, _pages.length, true);
+        _pageManager.addPage(videoPage);
       } else if (pageConfig.type == "finish") {
         var finishPage = new FinishPage(_pageManager, session, dataSender, pageConfig, config.language);
         _pageManager.addPage(finishPage);
@@ -111,6 +106,7 @@ function addPagesToPageManager(_pageManager, _pages) {
 
       }
     }
+    j = j + 1
   }
 }
 
@@ -124,7 +120,6 @@ for (var i = 0; i < $("body").children().length; i++) {
 
 
 function startup(config) {
-
 
   if (config == null) {
     errorHandler.sendError("URL couldn't be found!");
@@ -213,7 +208,6 @@ function startup(config) {
 }
 
 // start code (loads config) 
-
 function getParameterByName(name) {
   var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
   return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
