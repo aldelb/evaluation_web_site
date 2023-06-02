@@ -1,4 +1,4 @@
-testname: Evaluation des comportements faciaux
+testname: Evaluation perspective
 testId: facial-evaluation
 bufferSize: 2048
 stopOnErrors: true
@@ -16,8 +16,10 @@ pages:
           - type: video_believable
             id: scene2_sexisme_mic2_believability
             name: Page 1 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
-            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Ressemblance avec des comportements humains</strong>
             stimuli: 
                 C1: [b_real_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/real.mp4]
                 C2: [b_m1_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/50_700.mp4]
@@ -26,8 +28,10 @@ pages:
           - type: video_synchronized
             id: scene2_sexisme_mic2_synchronization
             name: Page 2 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
-            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Coordination avec la parole</strong>
             stimuli: 
                 C1: [s_real_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/real.mp4]
                 C2: [s_m1_scene2_sexisme_mic2, configs/videos/scene2_sexisme_mic2/50_700.mp4]
@@ -37,8 +41,10 @@ pages:
           - type: video_believable
             id: scene5_confrontation1_mic1_believability
             name: Page 3 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
-            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Ressemblance avec des comportements humains</strong>
             stimuli: 
                 C1: [b_real_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/real.mp4]
                 C2: [b_m1_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/50_700.mp4] 
@@ -47,8 +53,10 @@ pages:
           - type: video_synchronized
             id: scene5_confrontation1_mic1_synchronization
             name: Page 4 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
-            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Coordination avec la parole</strong>
             stimuli: 
                 C1: [s_real_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/real.mp4]
                 C2: [s_m1_scene5_confrontation1_mic1, configs/videos/scene5_confrontation1_mic1/50_700.mp4]
@@ -58,8 +66,10 @@ pages:
           - type: video_believable
             id: scene2_confrontation_prise1_mic1_believability
             name: Page 5 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
-            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Ressemblance avec des comportements humains</strong>
             stimuli: 
                 C1: [b_real_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/real.mp4]
                 C2: [b_m1_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/50_700.mp4]
@@ -68,8 +78,10 @@ pages:
           - type: video_synchronized
             id: scene2_confrontation_prise1_mic1_synchronization
             name: Page 6 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
-            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Coordination avec la parole</strong>
             stimuli: 
                 C1: [s_real_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/real.mp4]
                 C2: [s_m1_scene2_confrontation_prise1_mic1, configs/videos/scene2_confrontation_prise1_mic1/50_700.mp4]
@@ -79,8 +91,10 @@ pages:
           - type: video_believable
             id: scene3_sexisme_prise3_mic1_believability
             name: Page 7 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il n'y a pas de son)
-            question: Dans quelle mesure le comportement de l'agent ressemble t'il à des comportements humain ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Ressemblance avec des comportements humains</strong>
             stimuli: 
                 C1: [b_real_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/real.mp4]
                 C2: [b_m1_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/50_700.mp4]
@@ -89,8 +103,10 @@ pages:
           - type: video_synchronized
             id: scene3_sexisme_prise3_mic1_synchronization
             name: Page 8 of 22
-            content: Notez les vidéos ci-dessous (pour ce critère, il y a du son)
-            question: Dans quelle mesure le comportement de l'agent correspond-il au discours (en termes de rythme et d'intonation) ?
+            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
+            add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
+            ref: <strong>Coordination avec la parole</strong>
             stimuli: 
                 C1: [s_real_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/real.mp4]
                 C2: [s_m1_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/50_700.mp4]
@@ -98,14 +114,11 @@ pages:
                 C4: [s_m2_scene3_sexisme_prise3_mic1, configs/videos/scene3_sexisme_prise3_mic1/6_700.mp4]
   
     - type: finish
-      name: Merci
-      content: Merci pour votre participation
+      name: Merci !
+      content: <strong>Merci pour votre participation (complétez bien cette page pour nous envoyer vos résultats)</strong><br><br>
       showResults: true
       writeResults: true
       questionnaire:
-          - type: text
-            label: Nom Prénom
-            name: name
           - type: number
             label: Age
             name: age
@@ -117,14 +130,26 @@ pages:
             label: Genre
             response:
              - value: female
-               label: Female
+               label: Femme
              - value: male
-               label: Male
+               label: Homme
              - value: other
-               label: Other
+               label: Autre
+          - type: likert
+            name: french_level
+            label: Quel est votre niveau de français ?
+            response:
+             - value: experienced
+               label: Expérimenté 
+             - value: intermediate
+               label: Intermédiaire
+             - value: elementary
+               label: Élémentaire
+             - value: no_notion
+               label: Aucune notion
           - type: likert
             name: video_game
-            label: A quelle fréquence jouez-vous aux jeux vidéos ? 
+            label: A quelle fréquence jouez-vous aux jeux vidéos <br> avec des personnages non joueurs ? 
             response:
              - value: often
                label: Souvent
