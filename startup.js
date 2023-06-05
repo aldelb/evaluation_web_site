@@ -83,6 +83,9 @@ function addPagesToPageManager(_pageManager, _pages) {
       var pageConfig = _pages[i];
       if (pageConfig.type == "generic") {
         _pageManager.addPage(new GenericPage(_pageManager, pageConfig));
+      } else if (pageConfig.type == "test_page") {
+        var videoPage = new VideoPage(_pageManager, pageTemplateRenderer, session, config, pageConfig, errorHandler, config.language, j, _pages.length, true);
+        _pageManager.addPage(videoPage);
       } else if (pageConfig.type == "video_believable") {
         var videoPage = new VideoPage(_pageManager, pageTemplateRenderer, session, config, pageConfig, errorHandler, config.language, j, _pages.length, false);
         _pageManager.addPage(videoPage);

@@ -1,4 +1,4 @@
-testname: Evaluation perspective
+testname: Evaluation perceptive
 testId: facial-evaluation
 bufferSize: 2048
 stopOnErrors: true
@@ -11,12 +11,21 @@ pages:
       id: first_page
       name: Page d'instruction
       content: content in GenericPage.js
+    - type: test_page
+      id: test_page
+      name: Page de test
+      content: Regardez une partie de la vidéo ci dessus.
+      question: Entendez vous bien la vidéo ?
+      add : Profitez de cette page pour faire vos réglages (son, zoom de la page...) 
+      ref: Son de la vidéo
+      stimuli: 
+          C1: [test_video, configs/videos/video_test.mp4] 
     - 
           - random
           - type: video_believable
             id: scene2_sexisme_mic2_believability
             name: Page 1 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (Sur cette page, il n'y a pas de son.)
             question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Ressemblance avec des comportements humains</strong>
@@ -28,7 +37,7 @@ pages:
           - type: video_synchronized
             id: scene2_sexisme_mic2_synchronization
             name: Page 2 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (N'oubliez pas d'activer le son.)
             question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Coordination avec la parole</strong>
@@ -41,7 +50,7 @@ pages:
           - type: video_believable
             id: scene5_confrontation1_mic1_believability
             name: Page 3 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (Sur cette page, il n'y a pas de son.)
             question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Ressemblance avec des comportements humains</strong>
@@ -53,7 +62,7 @@ pages:
           - type: video_synchronized
             id: scene5_confrontation1_mic1_synchronization
             name: Page 4 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (N'oubliez pas d'activer le son.)
             question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Coordination avec la parole</strong>
@@ -66,7 +75,7 @@ pages:
           - type: video_believable
             id: scene2_confrontation_prise1_mic1_believability
             name: Page 5 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (Sur cette page, il n'y a pas de son.)
             question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Ressemblance avec des comportements humains</strong>
@@ -78,7 +87,7 @@ pages:
           - type: video_synchronized
             id: scene2_confrontation_prise1_mic1_synchronization
             name: Page 6 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (N'oubliez pas d'activer le son.)
             question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Coordination avec la parole</strong>
@@ -91,7 +100,7 @@ pages:
           - type: video_believable
             id: scene3_sexisme_prise3_mic1_believability
             name: Page 7 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (Sur cette page, il n'y a pas de son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (Sur cette page, il n'y a pas de son.)
             question: Selon vous, est ce que le comportement de l'agent ressemble à des comportements humains ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Ressemblance avec des comportements humains</strong>
@@ -103,7 +112,7 @@ pages:
           - type: video_synchronized
             id: scene3_sexisme_prise3_mic1_synchronization
             name: Page 8 of 22
-            content: Evaluez les vidéos ci-dessous en répondant à cette question. Il faut regarder puis évaluer les 4 vidéos. (N'oubliez pas d'activer le son.)
+            content: Regardez et évaluez les 4 vidéos ci dessus. (N'oubliez pas d'activer le son.)
             question: Selon vous, est ce que le comportement de l'agent est coordonné avec la parole (en termes de rythme et d'intonation) ?
             add: Comportement &#x2192; regard, expressions faciales et mouvements de tête
             ref: <strong>Coordination avec la parole</strong>
@@ -149,7 +158,7 @@ pages:
                label: Aucune notion
           - type: likert
             name: video_game
-            label: A quelle fréquence jouez-vous aux jeux vidéos <br> avec des personnages non joueurs ? 
+            label: A quelle fréquence jouez-vous à des jeux vidéos dans lesquels <br> vous êtes amené à croiser/interagir avec des personnages non joueurs ?
             response:
              - value: often
                label: Souvent

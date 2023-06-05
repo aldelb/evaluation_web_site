@@ -51,7 +51,7 @@ array_push($mushraCsvData, $input);
 
  
  foreach ($session->trials as $trial) {
-  if ($trial->type == "mushra" || $trial->type == "video_synchronized" || $trial->type == "video_believable") {
+  if ($trial->type == "mushra" || $trial->type == "video_synchronized" || $trial->type == "video_believable" || $trial->type == "test_page") {
   $write_mushra = true;
 
     foreach ($trial->responses as $response) {
@@ -71,7 +71,7 @@ array_push($mushraCsvData, $input);
 }
 		
 if ($write_mushra) {
-	$filename = $filepathPrefix."result_subjective_evaluation".$filepathPostfix;
+	$filename = $filepathPrefix."result_subjective_evaluation_".$session->uuid.$filepathPostfix;
 	//print_r($filename);
 	$isFile = is_file($filename);
 	$fp = fopen($filename, 'a');
